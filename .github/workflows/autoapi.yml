@@ -1,7 +1,16 @@
 #自动调用api保活，加密版
 name: Auto Api Secret
 
-on: push
+on: 
+  release:
+    types: [published]
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: 0 */6 * * *
+  watch:
+    types: [started]
 
 jobs:
   build:

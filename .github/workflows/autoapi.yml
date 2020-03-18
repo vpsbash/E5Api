@@ -49,6 +49,7 @@ jobs:
       run: |
         git config --global user.email rcdfrd@163.com
         git config --global user.name vpsbash
+        git pull
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
